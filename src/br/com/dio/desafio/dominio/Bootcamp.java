@@ -4,16 +4,16 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class Bootcamp {
 
     private String nome;
     private String descricao;
-    private LocalDate dataInicial = LocalDate.now();
-    private LocalDate dataFinal = dataInicial.plusDays(45);
-
+    private final LocalDate dataInicial = LocalDate.now();
+    private final LocalDate dataFinal = dataInicial.plusDays(45);
     private Set<Dev> devsInscritos = new HashSet<>();
-    private Set<Bootcamp> conteudos = new LinkedHashSet<>();
+    private Set<Conteudo> conteudos = new LinkedHashSet<>();
 
     public String getNome() {
         return nome;
@@ -35,16 +35,8 @@ public class Bootcamp {
         return dataInicial;
     }
 
-    public void setDataInicial(LocalDate dataInicial) {
-        this.dataInicial = dataInicial;
-    }
-
     public LocalDate getDataFinal() {
         return dataFinal;
-    }
-
-    public void setDataFinal(LocalDate dataFinal) {
-        this.dataFinal = dataFinal;
     }
 
     public Set<Dev> getDevsInscritos() {
@@ -55,11 +47,11 @@ public class Bootcamp {
         this.devsInscritos = devsInscritos;
     }
 
-    public Set<Bootcamp> getConteudos() {
+    public Set<Conteudo> getConteudos() {
         return conteudos;
     }
 
-    public void setConteudos(Set<Bootcamp> conteudos) {
+    public void setConteudos(Set<Conteudo> conteudos) {
         this.conteudos = conteudos;
     }
 
